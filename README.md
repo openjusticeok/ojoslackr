@@ -1,1 +1,1 @@
-# ojoslackr
+# ojo-slackr

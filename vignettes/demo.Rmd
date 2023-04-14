@@ -1,0 +1,57 @@
+---
+title: "ojo-slackr demo"
+---
+
+```{r}
+#| description: setup
+
+library(ojodb)
+library(slackr)
+library(here)
+library(tidyverse)
+
+# Init slackr
+slackr_setup(config_file = here(".slackr"))
+```
+
+```{r}
+#| description: get_data
+
+data <- ojo_crim_cases(
+  districts = "TULSA",
+  file_years = 2023,
+  case_types = c("CM", "CF")
+) |>
+  ojo_collect()
+```
+
+```{r}
+#| description: make_plot
+
+p <- data |>
+  group_by(
+    case_type,
+    week_filed = floor_date(date_filed, "week")
+  ) |>
+  count() |>
+  ggplot(aes(x = week_filed, y = n, color = case_type)) +
+    geom_line() +
+    ojo_theme() +
+    labs(
+      title = "TEST - Tulsa County Criminal Cases Filed",
+      subtitle = "2023",
+      x = NULL,
+      y = NULL
+    ) +
+    expand_limits(
+      y = 0
+    ) +
+    ojo_watermark()
+```
+
+```{r}
+#| description: slack_plot
+
+p |>
+  ggslackr()
+```
