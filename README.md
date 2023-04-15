@@ -1,17 +1,12 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-
 
 # ojoslackr
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ojoslackr is to ...
+The goal of ojoslackr is to …
 
 ## Installation
 
@@ -27,9 +22,7 @@ library(ojoslackr)
 
 This is a basic example which shows you how to solve a common problem:
 
-
-```r
+``` r
 library(ojoslackr)
-#> Error in library(ojoslackr): there is no package called 'ojoslackr'
 ## basic example code
 ```
