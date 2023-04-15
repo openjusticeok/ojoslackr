@@ -1,5 +1,6 @@
+^\.slackr$
 ^renv$
 ^renv\.lock$
-^ojo-slackr\.Rproj$
+^ojoslackr\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$

@@ -14,3 +14,15 @@ Imports:
     ggplot2,
     grid,
     slackr
+Suggests:
+    devtools,
+    here,
+    httpgd,
+    knitr,
+    languageserver,
+    ojodb,
+    rmarkdown,
+    testthat,
+    tidyverse,
+    usethis
+VignetteBuilder: knitr

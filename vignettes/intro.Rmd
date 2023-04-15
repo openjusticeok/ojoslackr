@@ -1,9 +1,22 @@
 ---
-title: "ojo-slackr demo"
+title: "Intro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
-```{r}
-#| description: setup
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+```{r setup}
+library(ojoslackr)
 
 library(ojodb)
 library(slackr)
@@ -22,7 +35,7 @@ data <- ojo_crim_cases(
   file_years = 2023,
   case_types = c("CM", "CF")
 ) |>
-  ojo_collect()
+  collect()
 ```
 
 ```{r}

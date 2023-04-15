@@ -14,7 +14,7 @@
 #' 
 #' @export
 #' @examples
-#' 
+#' \dontrun{
 #' library(ojodb)
 #' library(ggplot2)
 #' library(grid)
@@ -26,7 +26,8 @@
 #'    geom_point() +
 #'    ojo_theme() +
 #'    ojo_watermark("DRAFT")
-#'
+#' }
+#' 
 ojo_watermark <- function(text = "DRAFT", fontsize = 120,
                           color = "grey90", alpha = 0.1,
                           fontface = "bold", angle = 22) {
