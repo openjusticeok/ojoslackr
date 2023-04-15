@@ -1,14 +1,16 @@
 Package: ojoslackr
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
+Title: Slackr for Open Justice Oklahoma
+Version: 0.1.0
+Authors@R:
     person("Brancen", "Gregory", , "brancengregory@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description:
+    This package is a wrapper for the [{slackr}](https://github.com/mrkaye97/slackr) package that allows for
+    easy posting and analysis of messages, plots, and more on the Open Justice Oklahoma Slack workspace.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Imports: 
+Imports:
     ggplot2,
     grid,
     slackr
