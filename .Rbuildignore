@@ -4,3 +4,6 @@
 ^ojoslackr\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^rix\.R$
+^default\.nix$
+^shell\.nix$

@@ -31,6 +31,32 @@ You can install the development version of ojoslackr like so:
 library(ojoslackr)
 ```
 
+## Reproducible Environment with Nix
+
+This package includes `rix.R` configuration for creating reproducible R environments using [Nix](https://nixos.org/). This ensures that everyone working on the project has exactly the same R version and package versions.
+
+### Prerequisites
+
+1. Install [Nix](https://nixos.org/download.html)
+2. Install the rix R package: `install.packages("rix")`
+
+### Usage
+
+```{r}
+# Generate Nix environment files
+source("rix.R")
+
+# Use runtime environment (for using the package)
+# nix-shell default.nix
+
+# Use development environment (for package development, includes RStudio)  
+# nix-shell shell.nix
+```
+
+The rix configuration creates two environments:
+- **Runtime environment** (`default.nix`): Minimal environment for using ojoslackr
+- **Development environment** (`shell.nix`): Full environment with RStudio and development tools
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
